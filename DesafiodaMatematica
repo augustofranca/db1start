@@ -1,0 +1,77 @@
+//Algoritmo desenvolvido e compilável no Pzim(pascalzim)
+Program DesafioDaMatematica;
+
+Var
+	a, i, s: integer;	// define variaveis inteiras globais
+Begin
+	write('Digite um número inteiro: ');	// pede para o usuário digitar um número inteiro
+	readln(a);	// lê o número que o usuário digita, se não for número inteiro o programa não continua executando
+	writeln('=======================================');	//  separador entre entrada e saída dos dados
+	if (a mod 2=0) then	// utiliza a função mod para fazer uma divisão de número inteiro por 2 e verifica se a sobra da divisão é 0
+    		begin	
+     			writeln('O número é par.');	// retorna que o número é par e não é ímpar
+			writeln('O número não é ímpar.');
+     		end	
+	else
+     		begin
+			writeln('O número é ímpar.');	// retorna que o número é ímpar e não é par
+			writeln('O número não é par.');
+		end;
+	if (a < 10) then	// verifica se o número digitado é maior que 10
+		begin
+			writeln('É menor que 10.');	// retorna que é menor que 10
+		end
+	else
+		begin	// verifica se é igual a 10
+			if (a = 10) then
+				begin
+					writeln('Não é maior nem menor que 10, é igual a 10.');	// retorna que é igual a 10
+				end	
+			else
+				begin
+					writeln('É maior que 10.');	// se não é menor que 10 ou igual a 10, então é maior que 10, então retorna que é maior que 10
+				end;
+		end;
+	writeln('O dobro de ', a,' é ', a*2,'.');	// retorna o dobro do valor digitado
+	s:=0;	// define variavel de controle = 0
+	if (a = 0) then	// se o número digitado for 0, retorna que não é primo
+		begin
+			writeln('O número 0 não é primo.');                             
+		end
+	else	// senão, se for 1, retorna que não é primo
+		begin
+			if (a = 1) then
+				begin
+					writeln('O número 1 não é primo.');
+				end
+			else	// senão, se for 2, retorna que é primo
+				begin
+					if (a = 2) then
+						begin
+							writeln('O número 2 é primo.');
+						end
+					else	// senão, verifica se é maior que 3
+						begin
+							if a>3 then
+    								begin
+    									for i:=1 to a do	// começa uma estrutura de repetição que vai de 1 ao número digitado
+      										begin
+        										if (a mod i=0) then	// divide o número digitado por i e verifica a sobra da divisão, se for 0, então adiciona +1 a variável de controle
+												begin
+													s:=s+1;
+												end;
+										end;
+									if (s=2) then	// número primo só é divisível por ele mesmo e por 1, portanto só terão duas "sobras de divisão" que serão 0, sendo o número primo
+										begin
+											writeln('O numero ',a,' é primo.')
+										end
+									else	// se atingir um valor diferente de 2 então não será primo, visto que será divisível por outros números senão ele próprio ou 1
+										begin
+											writeln('O numero ',a,' nao é primo.');
+										end;					
+								end;
+						end;
+				end;
+		end;
+	readkey;	// espera o usuário pressionar qualquer tecla											
+End.
