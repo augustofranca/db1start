@@ -1,0 +1,44 @@
+program DesafioDeGeografia;
+type	// cria um novo tipo de atributo para variaveis
+	estados = record	// cria um objeto que possui diferentes atributos
+		cids: array[1..4] of string[13];	// 4 vetores de string com 13 caracteres para o nome das cidades
+		uf: string[2];	// Unidade Federativa
+	end;
+var
+	estado: array[1..3] of estado; //	3 vetores de estados (cada um com 4 vetores p/ cidades e uma sigla da UF
+	a: string[13];	//	variável para leitura dos dados
+	i, j: integer;	//	variáveis de controle
+begin
+	estado[1].cids[1]:= 'Curitiba';	//	registro das cidades em seus respectivos estados com a UF
+	estado[1].cids[2]:= 'Londrina'; 
+	estado[1].cids[3]:= 'Pinhais';
+	estado[1].cids[4]:= 'Maringá';
+	estado[1].uf:= 'PR';
+	estado[2].cids[1]:= 'Florianópolis';
+	estado[2].cids[2]:= 'Joinville';
+	estado[2].cids[3]:= 'Chapecó';
+	estado[2].cids[4]:= 'Blumenau';
+	estado[2].uf:= 'SC';
+	estado[3].cids[1]:= 'Porto Alegre';
+	estado[3].cids[2]:= 'Gramado';
+	estado[3].uf:= 'RS';
+	write('Digite uma cidade: ');	//	Pede para o usuário digitar uma cidade	
+	readln(a);	//	lê a cidade digitada
+	for i:= 1 to 3 do	// estrutura de repetição de 1 a 3 (estados)
+		begin
+			for j:=1 to 4 do	// estrutura de repetição de 1 a 4 (cidades)
+				if (a=estado[i].cids[j]) then	//	comparação com o dado digitado
+					begin
+						writeln('Pertence ao ', estado[i].uf,'.');	//	retorno da sigla da UF
+						if j=1 then	// verifica se a cidade digitada é armazenada no primeiro vetor de cada estado (representando a capital)
+							begin
+								writeln('É capital.');	// retorna que é capital
+							end
+						else
+							begin
+								writeln('Não é capital.');	// se for diferente de 1, retorna que não é capital
+							end;
+					end;
+		end;
+	readkey;	// aguarda o usuário pressionar uma tecla	
+end.
