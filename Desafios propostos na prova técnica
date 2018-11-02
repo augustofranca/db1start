@@ -1,0 +1,30 @@
+Afinal de contas, quais são as propostas de desafios? 
+1 - Desafio de Matemática 
+Faça um programa que o usuário poderá inserir um número. O programa deverá retornar em tela se o número digitado:
+* é ou não PAR 
+* é ou não IMPAR 
+* é ou não maior que 10
+* o dobro do valor digitado
+* é ou não primo
+Cenário para testes: 
+* Ao informar o número 2, deve retornar "é par", "não é impar", "não é maior que 10", "o dobro de 2 é 4", "é primo"
+* Ao informar o número 11, deve retornar "não é par", "é impar", "é maior que 10", "o dobro de 11 é 22", "é primo"
+
+2 - Desafio de Português 
+Faça um programa que o usuário poderá inserir um texto. O programa deverá informar:
+* quantidade de caracteres do texto
+* quantidade de espaços em branco no texto
+* quantidade de vogais digitadas
+Cenário para testes: 
+* Ao informar o texto DB1, deve retornar "3 caracteres", "0 espaços em branco", "0 vogais"
+* Ao informar o texto DB1 START, deve retornar "9 caracteres", "1 espaço em branco", "1 vogal"
+
+3 - Desafio de Geografia 
+Faça um programa que o usuário poderá inserir um nome de cidade. O programa deverá informar:
+* Qual o estado que a cidade pertence
+* Se é capital ou não
+* O conjunto de cidades permitidas devem ser as seguintes: Curitiba, Maringá, Londrina, Pinhais, Chapecó, Joinvile, Blumenau, Florianópolis, Porto Alegre, Gramado.
+Cenário para testes: 
+* Ao informar o nome da cidade Curitiba, deve retornar "Pertence ao PR", "É capital"
+* Ao informar o nome da cidade Maringá, deve retornar "Pertence ao PR", "Não é capital"
+* Ao informar o nome da cidade Porto Alegre, deve retornar "Pertence ao RS", "É capital"
