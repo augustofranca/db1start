@@ -1,0 +1,30 @@
+program DesafioDePortugues;
+var
+	a: string;	// definição de variaveis
+	i, j: integer;	// duas variáveis de controle
+Begin
+	write('Digite uma frase: ');	// pedido para o usuário digitar uma frase
+	readln(a);	// lê o que é digitado pelo usuário
+	writeln('================================');
+	writeln(length(a),' caracteres.');	// número de caracteres é dado pelo comprimento do vetor de char string
+	i:=0;
+	j:=0;
+	for i:=1 to length(a) do // para i=1 até comprimento de a faça
+		begin
+			if (a[i]=' ') then // se a posição i do vetor a for um caractere vazio então j = j+1
+				begin
+					j:=j+1;
+				end;
+		end;
+	writeln(j,' espaços em branco.');	// retorna o numero de espaços
+	j:=0;	//reset da variavel de controle
+	for i:=1 to length(a) do // para i=1 até comprimento de a faça
+		begin
+			if (a[i]='a') or (a[i]='e') or (a[i]='i') or (a[i]='o') or (a[i]='u') then	//se a posição i do vetor a for uma das 5 vogais, então j = j+1
+				begin
+					j:=j+1;
+				end;
+		end;
+	writeln(j,' vogais.');	// retorna número de vogais
+	readkey;	// aguarda um comando do usuário para finalizar o programa
+End.
